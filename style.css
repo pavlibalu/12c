@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Motiva Sans;
+    src: url(font/MotivaSansThin.ttf);
+}
+
+p {
+    font-family: Motiva Sans;
+}
+
+.popup .overlay {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width: 100vw;
+  height: 100vh;
+  background:rgba(0,0,0,0.7);
+  z-index: 1;
+  display: none;
+}
+
+.popup .content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%) scale(0);
+  background:#222528ff;
+  width: 450px;
+  height:220px;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+.popup .close-btn {
+  cursor:pointer;
+  position: fixed;
+  right: 20px;
+  top:20px;
+  width:30px;
+  height: 30px;
+  background:#222;
+  color:#fff;
+  font-size:25px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.popup.active .overlay {
+  display:block;
+}
+
+.popup.active .content {
+  transition: all 250ms ease-in-out;
+  transform:translate(-50%,-50%) scale(1);
+}
+
+.unstyled-button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+div {
+  margin: 20px 0;
+}
+
+
+ /* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.8;}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("media/interaktiv/tablo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#kep {
+  object-position: 300;
+}
