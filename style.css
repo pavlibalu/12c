@@ -8,122 +8,274 @@
     src: url(font/MotivaSansBold.woff.ttf);
 }
 
-body {
-    margin: 0;
-    font-family: Motiva-thin;
-    font-size:x-large;
-    background-color: #1b2838;
-    color: #c7d5e0;
+
+body{
+    color: white;
+    margin: 0px;
+    background:
+    radial-gradient(
+      ellipse 120vmax 80vmax at 50% 10%,
+      rgba(24, 66, 82, 0.8) 0%,
+      rgba(27, 43, 56, 0.9) 35%,
+      rgba(23, 26, 33, 1) 70%
+    ),
+
+    linear-gradient(
+    180deg,
+    #1b2838 0%,
+    #171a21 100% 
+    );
+
+    
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* Felső sáv */
-.topbar {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
+
+
+
+
+
+
+
+
+
+/*Fejléc eleje*/
+
+.fejlec {
+    border-bottom: slategray;
+
+    position: relative;
+    display: block;
     background-color: #171a21;
+    
 }
 
-.menu {
-    display: flex;
-    gap: 25px;
-}
+.menu-container{
 
-.menu a {
-    text-decoration: none;
-    color: #c7d5e0;
+
+    color: hsl(206, 29%, 87%);
     font-weight: 6000;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.menu-item{
+    
+
+    text-align: center;
+    padding: 0.5rem;
     cursor: pointer;
+    font-family: Motiva-thin;
+    font-size: x-large;
+    position: relative;
+    display: inline-block;
+    height: 40px; 
+    margin-left: 2rem;    
 }
 
-.menu a.active {
+.menu-item:hover{
+    color: white;
+}
+
+.menu-item-active{
     color: #1a9fff;
-    border-bottom: 2px solid #1a9fff;
-    padding-bottom: 4px;
+    border-bottom: 0.3rem solid #1a9fff;
+
+    cursor: pointer;
+    font-family: Motiva-thin;
+    font-size: x-large;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin-left: 2rem;
 }
 
-/* Kép */
-.banner img {
+/*Fejléc vége*/
+
+/*Borítókép*/
+.boritokep {
+   
+    overflow: hidden;
+}
+
+.boritokep img{ /*img tipusú child beállításai*/
     width: 100%;
+    height: auto;       
     display: block;
 }
+/*Borítókép vége*/
 
-/* Alsó sáv */
-.actions {
+/*Steam wrap*/
+
+.steam-wrap {
+    
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 30px;
+    flex-wrap: wrap;
+    
+    background: linear-gradient(
+      to bottom,
+      rgba(58, 62, 73, 0.9) 0%,
+      rgba(46, 52, 65, 0.9) 20%,
+      rgba(23, 26, 33, 0.9) 80%,
+      rgba(23, 26, 33, 0.9) 100%
+    );
 }
 
-.play-btn {
-    background-color: #5c7e10;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 3px;
-}
+/*Steam wrap vége*/
 
-.message {
-    margin-top: 15px;
-    color: #ff6b6b;
-    font-size: 14px;
-}
-
-/* Szív ikon */
-.heart {
-    font-size: 22px;
-    cursor: pointer;
-    color: #1a9fff;
-    user-select: none;
-}
-
-    .heart.inactive {
-    color: #7f8c8d;
-}
-
-/*LIVE PHOTO*/
-
-.live-photo {
-    width: 4535.43px;
-    height: 1108.894px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.live-photo:hover {
-    transform: scale(1.03);
-}
-
-.jatek {
-    position: absolute;
-    top: 555px;
-    left: 20px;
-    width:250px;
-}
-
-.tanc {
-    position: absolute;
-    left: 30%;
+/*Ikonok és játék gomb*/
+.ikonsav {
+    
+    position: relative;
+    display: inline-block;
+    
     width: 40%;
-    top: 10%;
+    height: 40%;  
+
+    margin-left: 10%;
 }
 
-.kozosseg-text {
+.jatek-gomb {
+    
+    display: inline-block;
+    position: relative;
+  
+    width: 20%;
+    height: 20%;
+
+    margin: 2%;
+
+    cursor: pointer;
+}
+
+.jatek-gomb:hover {
+    filter: hue-rotate(20deg);
+}
+
+/*Ikonok és játék gomb vége*/
+
+
+/*Containerek*/
+
+.container-row {
+  
+
+    font-family: Motiva-thin;
+    font-weight: 100;
+    font-size: small;
+
+    perspective: 1000px; /*Azért kell, hogy lehessen ebben a containerben 3d element*/
+    
+    position: relative;
+    display: block;
     width: 100%;
-    text-align: center;
-    margin-top: 475px;
+}
+
+.container-row-centered {
+    
+
+    font-family: Motiva-thin;
+    font-weight: 100;
+    font-size: small;
+
+    
+    
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/*Containerek vége*/
+
+
+
+/*Képkeretek*/
+.picture-frame-3d {
+
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    
+    
+    border-radius: 10px;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.picture-frame-3d:hover {
+    
+    transform: rotateX(15deg) scale(1.05);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.picture-frame-3d img{ /*img tipusú child beállításai*/
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+    
 }
 
 
- /* Style the Image Used to Trigger the Modal */
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+
+
+
+
+.picture-frame { /*A kép parentje*/
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    
+    
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 
-#myImg:hover {opacity: 0.8;}
+.picture-frame:hover {
+    
+    transform:  scale(1.05);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.picture-frame img{ /*img tipusú child beállításai*/
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/*Képkeretek vége*/
+
+
+.domain-3d{ /*3d effektekhez egy domain*/
+ 
+    display: inline-block;
+    perspective: 1000px;/*Azért kell, hogy lehessen ebben a containerben 3d element*/
+}
+
+.linebreak {
+    position: relative;
+    width: 90%;
+    height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px rgba(128, 128, 128, 0.461);
+    border-radius: 1000px;
+}
